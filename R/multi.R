@@ -1,21 +1,23 @@
-# Función recursiva para multiplicar dos números usando sumas sucesivas
+# Función para multiplicar dos números usando sumas sucesivas
 multiplicar <- function(a, b) {
-  # Caso base
   if (b == 0) {
     return(0)
   }
 
-  # Manejo de números negativos
   if (b < 0) {
     return(-multiplicar(a, -b))
   }
 
-  # Llamada recursiva
-  return(a + multiplicar(a, b - 1))
+  # Suma sucesiva
+  result <- 0
+  for (i in 1:b) {
+    result <- result + a
+  }
+  return(result)
 }
 
-# Función para solicitar números al usuario y mostrar el resultado
-multip<- function() {
+# Función para solicitar dos números y mostrar su multiplicación
+multip <- function() {
   cat("Ingrese el primer número: ")
   a <- as.numeric(readline())
 
