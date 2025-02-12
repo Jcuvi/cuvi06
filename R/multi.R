@@ -15,7 +15,7 @@ multiplicar <- function(a, b) {
 }
 
 # Función para solicitar números al usuario y mostrar el resultado
-multi<- function() {
+multip<- function() {
   cat("Ingrese el primer número: ")
   a <- as.numeric(readline())
 
